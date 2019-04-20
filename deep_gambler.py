@@ -2,7 +2,7 @@ from enums import *
 import random
 import tensorflow as tf
 import numpy as np
-
+ 
 class DeepGambler:
     def __init__(self, learning_rate=0.1, discount=0.95, exploration_rate=1.0, iterations=10000):
         self.learning_rate = learning_rate
