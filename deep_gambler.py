@@ -26,8 +26,8 @@ class DeepGambler:
         # NOTE: In this example we assume no batching.
         self.model_input = tf.placeholder(dtype=tf.float32, shape=[None, self.input_count])
 
-        # Two hidden layers of 16 neurons with sigmoid activation initialized to zero for stability
-        fc1 = tf.layers.dense(self.model_input, 16, activation=tf.sigmoid, kernel_initializer=tf.constant_initializer(np.zeros((self.input_count, 16))))
+        # Two hidden layers of 6 neurons with sigmoid activation initialized to zero for stability
+        fc1 = tf.layers.dense(self.model_input, 6, activation=tf.sigmoid, kernel_initializer=tf.constant_initializer(np.zeros((self.input_count, 6))))
 
         # Output is two values, Q for both possible actions FORWARD and BACKWARD
         # Output is 2-dimensional, due to possibility of batched training data
